@@ -14,19 +14,19 @@ The dataset used in this case study includes information on customer demographic
 
 1. I began by cleaning and preparing the dataset. This involved handling missing values, encoding categorical variables, and scaling numerical features to ensure data quality and consistency.
     1. Initial cleaning is done using Python.
-           1. Convert 'Purchase Date' to datetime format.
-           2. Remove duplicate rows.
+        - Convert 'Purchase Date' to datetime format.
+        - Remove duplicate rows.
     2. More in-depth cleaning through Talend Data Prep.
-           1. Removing 'Age' column due to being duplicate of 'Customer Age' column
-           2. Filling in missing value in 'Returns' column with 0. Reason being by default, the item is considered not returned.
+        - Removing 'Age' column due to being duplicate of 'Customer Age' column
+        - Filling in missing value in 'Returns' column with 0. Reason being by default, the item is considered not returned.
 
 2. I conducted feature engineering to create relevant attributes from existing data. For example, I derived the "FavoriteCategory" and "LastPurchaseDate" columns from "Product Category" and "Purchase Date."
    1. Derivation of new column is done in Python.
-          1. Extract year and month from 'Purchase Date'.
-          2. Calculate 'Total Purchase Amount' per transaction by multiplying 'Quantity' and 'Amount'.
-          3. Generate fake data for the 'Location' and 'MembershipLevel' columns based on Customer ID.
-          4. Add the 'LastPurchaseDate' column based on customerID.
-          5. Determine the favorite category for each customer based on the category purchased in the most quantity.
+        - Extract year and month from 'Purchase Date'.
+        - Calculate 'Total Purchase Amount' per transaction by multiplying 'Quantity' and 'Amount'.
+        - Generate fake data for the 'Location' and 'MembershipLevel' columns based on Customer ID.
+        - Add the 'LastPurchaseDate' column based on customerID.
+        - Determine the favorite category for each customer based on the category purchased in the most quantity.
    2. Values derived in new column is made sure to be consistent among the same customer using customer ID as reference.
 
 3. I explored several machine learning models, including Gradient Boosting, Decision Trees, and Random Forest, to predict customer churn. I evaluated model performance using metrics like misclassification rate and squared error.
