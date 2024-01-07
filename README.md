@@ -13,8 +13,8 @@ The dataset used in this case study includes information on customer demographic
 ## Methodology
 
 1. I began by cleaning and preparing the dataset. This involved handling missing values, encoding categorical variables, and scaling numerical features to ensure data quality and consistency.
-  1. Initial cleaning is done using Python.
-  2. More in-depth cleaning through Talend Data Prep.
+    1. Initial cleaning is done using Python.
+    2. More in-depth cleaning through Talend Data Prep.
 
 2. I conducted feature engineering to create relevant attributes from existing data. For example, I derived the "FavoriteCategory" and "LastPurchaseDate" columns from "Product Category" and "Purchase Date."
    1. Derivation of new column is done in Python.
